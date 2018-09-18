@@ -10,16 +10,6 @@ namespace ConsoleApp1
 {
     class Program
     {
-        public static (int, int, int, string) ArrayAndStr(int[] mass, string str)
-
-        {
-            int a = mass.Max();
-            int b = mass.Min();
-            int sum = mass.Sum();
-            string let = str.Substring(0, 1);
-            return (a, b, sum, let);
-        }
-
         static void Main(string[] args)
         {
             //1.Типы
@@ -215,7 +205,7 @@ namespace ConsoleApp1
             //e)
             var tuple2 = (10, "Place", 'p', "short", 1778763876);
             WriteLine("Второй кортеж: " + tuple2);
-            if (tuple == tuple2)
+            if (tuple.Equals(tuple2))
                 WriteLine("Кортежи равны");
             else
                 WriteLine("Кортежи не равны");
@@ -227,6 +217,15 @@ namespace ConsoleApp1
                 Write(" " + po);
             Write(", а также их сумма и первая буква строки 'hello':");
             WriteLine();
+            (int, int, int, string) ArrayAndStr(int[] mass, string strin)
+
+            {
+                int a = mass.Max();
+                int qe = mass.Min();
+                int summm = mass.Sum();
+                string let = strin.Substring(0, 1);
+                return (a, qe, summm, let);
+            }
             WriteLine(ArrayAndStr(ty, name1));
         }
     }
